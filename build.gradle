@@ -4,11 +4,13 @@ plugins {
 }
 pmd {
     consoleOutput = true
-    toolVersion = "6.21.0"
+    toolVersion = "6.39.0"
     rulesMinimumPriority = 5
     ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
 }
-
+pmd {
+    threads = 4
+}
 repositories {
     jcenter()
 }
